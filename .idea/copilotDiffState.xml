@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/client/public/index.html">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/client/public/index.html" />
+              <option name="originalContent" value="&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;en&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta charset=&quot;UTF-8&quot;&gt;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;&#10;    &lt;title&gt;File Converter&lt;/title&gt;&#10;&lt;/head&gt;&#10;&lt;body class=&quot;antialiased bg-gray-100 dark:bg-gray-900&quot;&gt;&#10;&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;&#10;&lt;script type=&quot;module&quot; src=&quot;/src/main.tsx&quot;&gt;&lt;/script&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;&#10;" />
+              <option name="updatedContent" value="&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;en&quot;&gt;&#10;&lt;head&gt;&#10;    &lt;meta charset=&quot;UTF-8&quot;&gt;&#10;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;&#10;    &lt;title&gt;File Converter&lt;/title&gt;&#10;    &lt;link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; /&gt;&#10;&lt;/head&gt;&#10;&lt;body class=&quot;antialiased bg-gray-100 dark:bg-gray-900&quot;&gt;&#10;&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;&#10;&lt;script type=&quot;module&quot; src=&quot;/src/main.tsx&quot;&gt;&lt;/script&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client/src/App.tsx">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/client/src/App.tsx" />
+              <option name="originalContent" value="import React from 'react';&#10;import { AppProvider } from './context/AppContext';&#10;import AdBanner from './components/AdBanner';&#10;import FormatSelector from './components/FormatSelector';&#10;import FileUploader from './components/FileUploader';&#10;import ProgressBar from './components/ProgressBar';&#10;import RecentList from './components/RecentList';&#10;import { useToast } from './hooks/useToast';&#10;&#10;function AppContent() {&#10;    const { message, show } = useToast();&#10;    const [percent, setPercent] = React.useState(0);&#10;    return (&#10;        &lt;div className=&quot;p-6 max-w-lg mx-auto bg-white dark:bg-gray-800 rounded-lg shadow&quot;&gt;&#10;            &lt;h1 className=&quot;text-2xl mb-4&quot;&gt;File Converter&lt;/h1&gt;&#10;            &lt;AdBanner /&gt;&#10;            &lt;FormatSelector /&gt;&#10;            &lt;ProgressBar percent={percent} /&gt;&#10;            &lt;FileUploader setProgress={setPercent} show={show} /&gt;&#10;            &lt;RecentList /&gt;&#10;            {message &amp;&amp; &lt;div className=&quot;toast toast-top toast-center&quot;&gt;{message}&lt;/div&gt;}&#10;        &lt;/div&gt;&#10;    );&#10;}&#10;&#10;export default function App() {&#10;    return (&#10;        &lt;AppProvider&gt;&#10;            &lt;AppContent /&gt;&#10;        &lt;/AppProvider&gt;&#10;    );&#10;}&#10;" />
+              <option name="updatedContent" value="import React from 'react';&#10;&#10;export default function App() {&#10;    return (&#10;        &lt;div className=&quot;p-6 max-w-lg mx-auto bg-white dark:bg-gray-800 rounded-lg shadow&quot;&gt;&#10;            &lt;h1 className=&quot;text-2xl mb-4&quot;&gt;Hello World&lt;/h1&gt;&#10;        &lt;/div&gt;&#10;    );&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client/src/components/AdBanner.tsx">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/client/src/components/AdBanner.tsx" />
+              <option name="originalContent" value="import React, { useEffect } from 'react';&#10;&#10;export default function AdBanner() {&#10;    useEffect(() =&gt; {&#10;        const script = document.createElement('script');&#10;        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';&#10;        script.async = true;&#10;        document.body.appendChild(script);&#10;        return () =&gt; {&#10;            document.body.removeChild(script);&#10;        };&#10;    }, []);&#10;&#10;    return (&#10;        &lt;div className=&quot;my-4 text-center&quot;&gt;&#10;            {/* Google AdSense global script, index.html head'e eklensin */}&#10;            &lt;ins className=&quot;adsbygoogle&quot;&#10;                 style={{ display: 'block' }}&#10;                 data-ad-client={import.meta.env.VITE_ADSENSE_CLIENT}&#10;                 data-ad-slot={import.meta.env.VITE_ADSENSE_SLOT}&#10;                 data-ad-format=&quot;auto&quot;&#10;                 data-full-width-responsive=&quot;true&quot;&gt;&lt;/ins&gt;&#10;            &lt;script&gt;(adsbygoogle = window.adsbygoogle || []).push({});&lt;/script&gt;&#10;        &lt;/div&gt;&#10;    );&#10;}" />
+              <option name="updatedContent" value="import React from 'react';&#10;&#10;export default function AdBanner() {&#10;    return (&#10;        &lt;div className=&quot;my-4 text-center&quot;&gt;&#10;            &lt;ins className=&quot;adsbygoogle&quot;&#10;                 style={{ display: 'block' }}&#10;                 data-ad-client={import.meta.env.VITE_ADSENSE_CLIENT}&#10;                 data-ad-slot={import.meta.env.VITE_ADSENSE_SLOT}&#10;                 data-ad-format=&quot;auto&quot;&#10;                 data-full-width-responsive=&quot;true&quot;&gt;&lt;/ins&gt;&#10;        &lt;/div&gt;&#10;    );&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client/src/components/RecentList.tsx">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/client/src/components/RecentList.tsx" />
+              <option name="originalContent" value="import React from 'react';&#10;interface Item { name: string; format: string; date: string; }&#10;const sample: Item[] = JSON.parse(localStorage.getItem('recent') || '[]');&#10;export default function RecentList() {&#10;    return (&#10;        &lt;div className=&quot;mt-4&quot;&gt;&#10;            &lt;h2 className=&quot;font-semibold&quot;&gt;Recent&lt;/h2&gt;&#10;            &lt;ul className=&quot;list-disc pl-5&quot;&gt;&#10;                {sample.map((it, i) =&gt; &lt;li key={i}&gt;{it.name} → {it.format} on {it.date}&lt;/li&gt;)}&#10;            &lt;/ul&gt;&#10;        &lt;/div&gt;&#10;    );&#10;}&#10;" />
+              <option name="updatedContent" value="import React, { useEffect, useState } from 'react';&#10;interface Item { name: string; format: string; date: string; }&#10;&#10;export default function RecentList() {&#10;    const [recent, setRecent] = useState&lt;Item[]&gt;([]);&#10;&#10;    useEffect(() =&gt; {&#10;        const stored = JSON.parse(localStorage.getItem('recent') || '[]');&#10;        setRecent(stored);&#10;    }, []);&#10;&#10;    return (&#10;        &lt;div className=&quot;mt-4&quot;&gt;&#10;            &lt;h2 className=&quot;font-semibold&quot;&gt;Recent&lt;/h2&gt;&#10;            &lt;ul className=&quot;list-disc pl-5&quot;&gt;&#10;                {recent.map((it, i) =&gt; &lt;li key={i}&gt;{it.name} → {it.format} on {it.date}&lt;/li&gt;)}&#10;            &lt;/ul&gt;&#10;        &lt;/div&gt;&#10;    );&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client/src/main.tsx">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/client/src/main.tsx" />
+              <option name="updatedContent" value="import React from 'react';&#10;import ReactDOM from 'react-dom/client';&#10;&#10;// Basit bir App bileşeni&#10;function App() {&#10;  return &lt;h1&gt;File Converter&lt;/h1&gt;;&#10;}&#10;&#10;// React 18+ için createRoot kullanımı&#10;ReactDOM.createRoot(document.getElementById('app')!).render(&#10;  &lt;React.StrictMode&gt;&#10;    &lt;App /&gt;&#10;  &lt;/React.StrictMode&gt;&#10;);&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client/src/services/api.ts">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/client/src/services/api.ts" />
+              <option name="originalContent" value="export const convertFile = async (file: File, format: string): Promise&lt;Blob&gt; =&gt; {&#10;    const data = new FormData();&#10;    data.append('input', file);&#10;    data.append('targetFormat', format);&#10;    const resp = await fetch('/api/convert', { method: 'POST', body: data });&#10;    if (!resp.ok) throw new Error('Conversion failed');&#10;    return await resp.blob();&#10;};&#10;" />
+              <option name="updatedContent" value="export const convertFile = async (file: File, format: string): Promise&lt;Blob&gt; =&gt; {&#10;    const data = new FormData();&#10;    data.append('input', file);&#10;    data.append('targetFormat', format);&#10;    const resp = await fetch('/api/convert', { method: 'POST', body: data });&#10;    if (!resp.ok) {&#10;        const error = await resp.json().catch(() =&gt; ({ message: 'Unknown error' }));&#10;        throw new Error(`Conversion failed: ${error.message || resp.statusText}`);&#10;    }&#10;    return await resp.blob();&#10;};" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/client/vite.config.ts">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/client/vite.config.ts" />
+              <option name="originalContent" value="import { defineConfig } from 'vite';&#10;import react from '@vitejs/plugin-react';&#10;import path from 'path';&#10;&#10;export default defineConfig({&#10;    root: path.resolve(__dirname),&#10;    base: './',&#10;    publicDir: path.resolve(__dirname, 'public'),&#10;    plugins: [react()],&#10;    server: {&#10;        port: 5173,&#10;        strictPort: true,&#10;        open: true,&#10;        proxy: {&#10;            '/api': {&#10;                target: 'http://localhost:5001',&#10;                changeOrigin: true,&#10;                secure: false,&#10;            },&#10;        },&#10;    },&#10;    build: {&#10;        outDir: path.resolve(__dirname, 'dist'),&#10;        emptyOutDir: true,&#10;        rollupOptions: {&#10;            input: path.resolve(__dirname, 'public', 'index.html'),&#10;        },&#10;    },&#10;});&#10;" />
+              <option name="updatedContent" value="import { defineConfig } from 'vite';&#10;import react from '@vitejs/plugin-react';&#10;import path from 'path';&#10;&#10;export default defineConfig({&#10;    root: path.resolve(__dirname),&#10;    base: './',&#10;    publicDir: path.resolve(__dirname, 'public'),&#10;    plugins: [react()],&#10;    server: {&#10;        port: 5173,&#10;        strictPort: true,&#10;        open: true,&#10;        proxy: {&#10;            '/api': {&#10;                target: 'http://localhost:5001',&#10;                changeOrigin: true,&#10;                secure: false,&#10;            },&#10;        },&#10;    },&#10;    build: {&#10;        outDir: path.resolve(__dirname, 'dist'),&#10;        emptyOutDir: true,&#10;        rollupOptions: {&#10;            input: path.resolve(__dirname, 'public', 'index.html'),&#10;        },&#10;    },&#10;});" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/index.html">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/index.html" />
+              <option name="updatedContent" value="&lt;!DOCTYPE html&gt;&#10;&lt;html lang=&quot;tr&quot;&gt;&#10;  &lt;head&gt;&#10;    &lt;meta charset=&quot;UTF-8&quot; /&gt;&#10;    &lt;title&gt;File Converter&lt;/title&gt;&#10;  &lt;/head&gt;&#10;  &lt;body&gt;&#10;    &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;&#10;    &lt;script type=&quot;module&quot; src=&quot;/src/main.ts&quot;&gt;&lt;/script&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server/.env">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/server/.env" />
+              <option name="updatedContent" value="PORT=5001&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server/controllers/controller.ts">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/server/controllers/controller.ts" />
+              <option name="originalContent" value="import { Request, Response } from 'express';&#10;import convertService from '../services/service';&#10;&#10;export const handleConvert = async (req: Request, res: Response) =&gt; {&#10;    try {&#10;        if (!req.files?.input) throw new Error('No file uploaded');&#10;        const file = req.files.input as fileUpload.UploadedFile;&#10;        const buffer = await convertService.convert(file.tempFilePath, req.body.targetFormat);&#10;        res.set({&#10;            'Content-Disposition': `attachment; filename=&quot;${file.name.split('.')[0]}.${req.body.targetFormat}&quot;`,&#10;            'Content-Type': 'application/octet-stream'&#10;        });&#10;        res.send(buffer);&#10;    } catch (e) {&#10;        res.status(400).json({ error: (e as Error).message });&#10;    }&#10;};&#10;" />
+              <option name="updatedContent" value="import { Request, Response } from 'express';&#10;import { UploadedFile } from 'express-fileupload';&#10;import convertService from '../services/service';&#10;&#10;export const handleConvert = async (req: Request, res: Response) =&gt; {&#10;    try {&#10;        if (!req.files?.input) throw new Error('No file uploaded');&#10;        const file = req.files.input as UploadedFile;&#10;        const buffer = await convertService.convert(file.tempFilePath, req.body.targetFormat);&#10;        res.set({&#10;            'Content-Disposition': `attachment; filename=&quot;${file.name.split('.')[0]}.${req.body.targetFormat}&quot;`,&#10;            'Content-Type': 'application/octet-stream'&#10;        });&#10;        res.send(buffer);&#10;    } catch (e) {&#10;        res.status(400).json({ error: (e as Error).message });&#10;    }&#10;};" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server/index.ts">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/server/index.ts" />
+              <option name="originalContent" value="import * as express from 'express';&#10;import * as fileUpload from 'express-fileupload';&#10;import route from './routes/route';&#10;import path from 'path';&#10;import * as dotenv from 'dotenv';&#10;&#10;dotenv.config();&#10;const app: Application = express();&#10;app.use(express.json());&#10;app.use(&#10;    fileUpload({ useTempFiles: true, tempFileDir: './uploads', limits: { fileSize: 50 * 1024 * 1024 } })&#10;);&#10;&#10;app.use('/api/convert', route);&#10;&#10;if (process.env.NODE_ENV === 'production') {&#10;    app.use(express.static(path.join(__dirname, '../client/dist')));&#10;    app.get('*', (_req, res) =&gt; {&#10;        res.sendFile(path.resolve(__dirname, '../client/dist/index.html'));&#10;    });&#10;}&#10;&#10;const PORT = Number(process.env.PORT) || 5000;&#10;&#10;// Start server with error handling for address in use&#10;const serverInstance = app.listen(PORT, () =&gt;&#10;    console.log(`Server running on http://localhost:${PORT}`)&#10;);&#10;&#10;serverInstance.on('error', (err: NodeJS.ErrnoException) =&gt; {&#10;    if (err.code === 'EADDRINUSE') {&#10;        console.error(`Port ${PORT} in use, please free it or set a different PORT in .env`);&#10;        process.exit(1);&#10;    } else {&#10;        console.error('Server error:', err);&#10;    }&#10;});&#10;" />
+              <option name="updatedContent" value="import express, { Application, Request, Response } from 'express';&#10;import fileUpload from 'express-fileupload';&#10;import route from './routes/route';&#10;import path from 'path';&#10;import * as dotenv from 'dotenv';&#10;&#10;dotenv.config();&#10;const app: Application = express();&#10;app.use(express.json());&#10;app.use(&#10;    fileUpload({ useTempFiles: true, tempFileDir: './uploads', limits: { fileSize: 50 * 1024 * 1024 } })&#10;);&#10;&#10;app.use('/api/convert', route);&#10;&#10;if (process.env.NODE_ENV === 'production') {&#10;    app.use(express.static(path.join(__dirname, '../client/dist')));&#10;    app.get('*', (_req: Request, res: Response) =&gt; {&#10;        res.sendFile(path.resolve(__dirname, '../client/dist/index.html'));&#10;    });&#10;}&#10;&#10;const PORT = Number(process.env.PORT) || 5000;&#10;&#10;// Start server with error handling for address in use&#10;const serverInstance = app.listen(PORT, () =&gt;&#10;    console.log(`Server running on http://localhost:${PORT}`)&#10;);&#10;&#10;serverInstance.on('error', (err: NodeJS.ErrnoException) =&gt; {&#10;    if (err.code === 'EADDRINUSE') {&#10;        console.error(`Port ${PORT} in use, please free it or set a different PORT in .env`);&#10;        process.exit(1);&#10;    } else {&#10;        console.error('Server error:', err);&#10;    }&#10;});" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/server/tsconfig.json">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/server/tsconfig.json" />
+              <option name="updatedContent" value="{&#10;  &quot;compilerOptions&quot;: {&#10;    &quot;target&quot;: &quot;ES2020&quot;,&#10;    &quot;module&quot;: &quot;commonjs&quot;,&#10;    &quot;outDir&quot;: &quot;dist&quot;,&#10;    &quot;rootDir&quot;: &quot;./&quot;,&#10;    &quot;strict&quot;: true,&#10;    &quot;esModuleInterop&quot;: true,&#10;    &quot;skipLibCheck&quot;: true,&#10;    &quot;forceConsistentCasingInFileNames&quot;: true&#10;  },&#10;  &quot;include&quot;: [&quot;./**/*.ts&quot;],&#10;  &quot;exclude&quot;: [&quot;node_modules&quot;, &quot;dist&quot;]&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/vite.config.js">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/vite.config.js" />
+              <option name="updatedContent" value="import { defineConfig } from 'vite';&#10;// ...existing code...&#10;export default defineConfig({&#10;  // ...existing config...&#10;  optimizeDeps: {&#10;    include: ['vue', 'react', 'your-main-dependency'] // Kullandığınız ana bağımlılıkları ekleyin&#10;  },&#10;  build: {&#10;    rollupOptions: {&#10;      input: './index.html' // Giriş dosyanızın yolu&#10;    }&#10;  }&#10;  // ...existing code...&#10;});&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

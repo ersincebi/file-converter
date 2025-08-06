@@ -1,0 +1,22 @@
+{
+  "name": "file-converter-client",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.x",
+    "react-dom": "^18.x"
+  },
+  "devDependencies": {
+    "typescript": "^4.x",
+    "vite": "^4.x",
+    "@vitejs/plugin-react": "^3.x",
+    "tailwindcss": "^3.x",
+    "daisyui": "^2.x",
+    "autoprefixer": "^10.x",
+    "postcss": "^8.x"
+  }
+}
